@@ -6,7 +6,6 @@ import { useRouter } from "next/navigation";
 
 export default function VerifyOTPPage() {
     const [otp, setOtp] = useState("");
-    const router = useRouter();
 
     return (
         <div className="min-h-screen flex items-center justify-center p-4 relative overflow-hidden" style={{ backgroundColor: 'rgba(15,15,15,255)' }}>
@@ -69,10 +68,6 @@ export default function VerifyOTPPage() {
                                         if (inputs[index + 1]) {
                                             (inputs[index + 1] as HTMLInputElement).focus();
                                         }
-                                    }
-
-                                    if (finalOtp === "123456") {
-                                        router.push("/dashboard");
                                     }
                                 }}
                                 onKeyDown={(e) => {
