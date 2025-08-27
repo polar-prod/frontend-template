@@ -19,17 +19,7 @@ export default function CreateAccountPage() {
     };
 
     return (
-        <div className="min-h-screen flex items-center justify-center p-4 relative overflow-hidden" style={{ backgroundColor: 'oklch(14.5% 0 0)' }}>
-            {/* Grid Background */}
-            <div className="absolute inset-0 opacity-10">
-                <div className="absolute inset-0" style={{
-                    backgroundImage: `
-            linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px)
-          `,
-                    backgroundSize: '80px 80px'
-                }}></div>
-            </div>
+        <div className="min-h-screen flex items-center justify-center p-4 relative overflow-hidden" style={{ backgroundColor: 'rgba(15,15,15,255)' }}>
 
             <motion.div
                 className="w-full max-w-md relative z-10 space-y-6"
@@ -64,23 +54,23 @@ export default function CreateAccountPage() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.8, ease: "easeOut" }}
                 >
-                    <Button variant="outline" className="w-full h-11 bg-white/15 border border-white/20 text-white hover:bg-white/25 transition-all duration-300 flex items-center justify-center rounded-2xl">
-                        <div className="w-5 h-5 mr-3 flex items-center justify-center">
-                            <img src="/google.svg" alt="Google" className="w-4 h-4" />
+                    <Button variant="outline" className="w-full h-10 bg-white/15 border border-white/20 text-white hover:bg-white/25 transition-all duration-300 flex items-center justify-center rounded-xl">
+                        <div className="w-6 h-6 mr-3 flex items-center justify-center">
+                            <img src="/google.svg" alt="Google" className="w-5 h-5" />
                         </div>
                         <span className="text-sm font-medium">Login with Google</span>
                     </Button>
 
-                    <Button variant="outline" className="w-full h-11 bg-white/15 border border-white/20 text-white hover:bg-white/25 transition-all duration-300 flex items-center justify-center rounded-2xl">
-                        <div className="w-5 h-5 mr-3 flex items-center justify-center">
-                            <img src="/apple.svg" alt="Apple" className="w-4 h-4" />
+                    <Button variant="outline" className="w-full h-10 bg-white/15 border border-white/20 text-white hover:bg-white/25 transition-all duration-300 flex items-center justify-center rounded-xl">
+                        <div className="w-6 h-6 mr-3 flex items-center justify-center">
+                            <img src="/apple.svg" alt="Apple" className="w-5 h-5" />
                         </div>
                         <span className="text-sm font-medium">Login with Apple</span>
                     </Button>
 
-                    <Button variant="outline" className="w-full h-11 bg-white/15 border border-white/20 text-white hover:bg-white/25 transition-all duration-300 flex items-center justify-center rounded-2xl">
-                        <div className="w-5 h-5 mr-3 flex items-center justify-center">
-                            <img src="/github.svg" alt="GitHub" className="w-4 h-4" />
+                    <Button variant="outline" className="w-full h-10 bg-white/15 border border-white/20 text-white hover:bg-white/25 transition-all duration-300 flex items-center justify-center rounded-xl">
+                        <div className="w-6 h-6 mr-3 flex items-center justify-center">
+                            <img src="/github.svg" alt="GitHub" className="w-5 h-5" />
                         </div>
                         <span className="text-sm font-medium">Login with GitHub</span>
                     </Button>
@@ -112,7 +102,7 @@ export default function CreateAccountPage() {
                             placeholder="jane.doe@floot.dev"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
-                            className="h-11 bg-white/15 border border-white/20 text-white placeholder:text-gray-400 focus:ring-blue-400/30 transition-all duration-300 rounded-2xl"
+                            className="h-10 bg-white/15 border border-white/20 text-white placeholder:text-gray-400 focus:ring-blue-400/30 transition-all duration-300 rounded-xl"
                         />
                     </div>
                     <div className="space-y-2">
@@ -122,7 +112,7 @@ export default function CreateAccountPage() {
                             placeholder="Enter your password"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
-                            className="h-11 bg-white/15 border border-white/20 text-white placeholder:text-gray-400 focus:ring-blue-400/30 transition-all duration-300 rounded-2xl"
+                            className="h-10 bg-white/15 border border-white/20 text-white placeholder:text-gray-400 focus:ring-blue-400/30 transition-all duration-300 rounded-xl"
                         />
                     </div>
                 </motion.div>
@@ -135,7 +125,7 @@ export default function CreateAccountPage() {
                 >
                     <Button
                         onClick={handleSubmit}
-                        className="w-full h-12 bg-white hover:bg-gray-50 text-gray-900 font-semibold text-base transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] border-0 rounded-2xl"
+                        className="w-full h-10 bg-white hover:bg-gray-50 text-gray-900 font-semibold text-base transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] border-0 rounded-xl"
                     >
                         Create account
                     </Button>

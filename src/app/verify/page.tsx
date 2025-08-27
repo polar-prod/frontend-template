@@ -9,17 +9,7 @@ export default function VerifyOTPPage() {
     const router = useRouter();
 
     return (
-        <div className="min-h-screen flex items-center justify-center p-4 relative overflow-hidden" style={{ backgroundColor: 'oklch(14.5% 0 0)' }}>
-            {/* Grid Background */}
-            <div className="absolute inset-0 opacity-10">
-                <div className="absolute inset-0" style={{
-                    backgroundImage: `
-            linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px)
-          `,
-                    backgroundSize: '80px 80px'
-                }}></div>
-            </div>
+        <div className="min-h-screen flex items-center justify-center p-4 relative overflow-hidden" style={{ backgroundColor: 'rgba(15,15,15,255)' }}>
 
             <motion.div
                 className="w-full max-w-md relative z-10 space-y-8"
@@ -59,14 +49,13 @@ export default function VerifyOTPPage() {
                     transition={{ duration: 0.5, delay: 0.8, ease: "easeOut" }}
                 >
                     <div className="flex gap-4">
-                        {Array.from({ length: 5 }).map((_, index) => (
+                        {Array.from({ length: 6 }).map((_, index) => (
                             <input
                                 key={index}
                                 type="text"
                                 maxLength={1}
                                 value={otp[index] || ''}
-                                style={{ backgroundColor: 'oklch(18% 0 0)' }}
-                                className="w-16 h-16 border border-gray-400 text-white text-2xl font-semibold text-center focus:ring-blue-400/30 focus:outline-none rounded-lg"
+                                className="w-14 h-16 bg-[#414141] border border-transparent text-white text-2xl font-semibold text-center focus:outline-none focus:border-white/30 rounded-lg transition-all duration-300"
                                 onChange={(e) => {
                                     const value = e.target.value;
                                     const newOtp = otp.split('');
@@ -75,14 +64,14 @@ export default function VerifyOTPPage() {
                                     setOtp(finalOtp);
 
                                     // Auto-focus to next input
-                                    if (value && index < 4) {
+                                    if (value && index < 5) {
                                         const inputs = document.querySelectorAll('input[type="text"]');
                                         if (inputs[index + 1]) {
                                             (inputs[index + 1] as HTMLInputElement).focus();
                                         }
                                     }
 
-                                    if (finalOtp === "12345") {
+                                    if (finalOtp === "123456") {
                                         router.push("/dashboard");
                                     }
                                 }}
